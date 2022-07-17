@@ -1,0 +1,15 @@
+server:
+  port: 8888
+debezium:
+  database:
+    - name: qm
+      enabled: true
+      serverId: 1
+      host: 127.0.0.1
+      port: 13306
+      username: root
+      password: 123456
+      offset-path: debezium/qm/offset.dat
+      history-path: debezium/qm/dbhistory.dat
+      table:
+        - qm.user
